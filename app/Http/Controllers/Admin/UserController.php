@@ -5,10 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Persona;
-use Faker\Provider\Person;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use App\Http\Requests\ValidUserForm;
 
 class UserController extends Controller
 {
@@ -44,7 +43,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store(Request $request)
+    public function store(ValidUserForm $request)
     {
         $usuario = new User();
         $usuario->email = $request->email;

@@ -33,12 +33,22 @@
                                     <label class="col-md-4 control-label" for="example-email">Email</label>
                                     <div class="col-md-6">
                                         <input type="text" id="example-email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Ingrese su correo Electronico" autofocus>
+                                        @if ($errors->has('email'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('email') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="example-password">Password</label>
                                     <div class="col-md-6">
                                         <input type="password" id="example-password" name="password" class="form-control" placeholder="Ingrese su contraseña">
+                                        @if ($errors->has('password'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('password') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -68,30 +78,55 @@
                                     <label class="col-md-4 control-label" for="example-firstname">Nombres</label>
                                     <div class="col-md-6">
                                         <input type="text" id="example-firstname" name="name" class="form-control" value="{{ old('name') }}" placeholder="Ingrese sus nombres">
+                                        @if ($errors->has('name'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('name') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="example-lastname">Apellidos</label>
                                     <div class="col-md-6">
                                         <input type="text" id="example-lastname" name="lastname" class="form-control" placeholder="Ingrese sus apellidos">
+                                        @if ($errors->has('lastname'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('lastname') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="example-lastname"># Celular </label>
+                                    <label class="col-md-4 control-label" for="example-phone"># Celular </label>
                                     <div class="col-md-6">
-                                        <input type="text" id="example-lastname" name="phone" class="form-control" placeholder="Ingrese su # de celular (whatsapp)">
+                                        <input type="text" id="example-phone" name="phone" class="form-control" placeholder="Ingrese su # de celular (whatsapp)">
+                                        @if ($errors->has('phone'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('phone') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="example-address">Dirección</label>
                                     <div class="col-md-6">
                                         <input type="text" id="example-address" name="address" class="form-control" placeholder="Ingrese su dirección">
+                                        @if ($errors->has('address'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('address') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="example-city">Facebook</label>
+                                    <label class="col-md-4 control-label" for="example-face">Facebook</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="example-city" name="face" class="form-control" placeholder="Ingrese su facebook personal">
+                                        <input type="text" id="example-face" name="face" class="form-control" placeholder="Ingrese su facebook personal">
+                                        @if ($errors->has('face'))
+                                            <small class="form-text text-danger">
+                                                {{ $errors->first('face') }}
+                                            </small>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
