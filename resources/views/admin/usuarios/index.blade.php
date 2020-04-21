@@ -1,35 +1,41 @@
 @extends('admin.layout')
 
 @section('content')
-    <!-- Datatables Content -->
-    <div class="block full" xmlns="http://www.w3.org/1999/html">
-        <div class="block-title">
-            <h2><strong>Lista de </strong> Usuarios</h2>
+    <!-- Forms General Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-table"></i>Lista de Usuarios<br><small>En esta sección puede ver la lista de los usuarios</small>
+            </h1>
         </div>
-        <div class="div">
-            <button type="submit" class="btn btn-info">Crear Nuevo</button>
-            <a href="#modal-regular2" class="btn btn-sm btn-default" data-toggle="modal">Fade In</a>
-        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Usuarios</li>
+        <li><a href="">Lista de Usuarios</a></li>
+    </ul>
 
+    <!-- END Forms General Header -->
+    <!-- Datatables Content -->
+
+    <div class="block full" xmlns="http://www.w3.org/1999/html">
         <div class="table-responsive">
+            <a href="{{ route('usuarios.create') }}" class="btn btn-info">Crear Nuevo</a>
             <table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
                 <thead>
                 <tr>
-                    <th class="text-center">ID</th>
                     <th>Email</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Telefono</th>
                     <th>Direcciòn</th>
                     <th>Facebook</th>
-                    <th class="text-center">Actions</th>
+                    <th class="text-center">Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
 
                     @foreach($users as $user)
                         <tr>
-                            <td class="text-center">1</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->persona->name }}</td>
                             <td>{{ $user->persona->lastname }}</td>
@@ -62,6 +68,19 @@
     <!-- END Dashboard Header -->
 
 
+
+@endsection
+
+@push('scripts')
+    <!-- Load and execute javascript code used only in this page -->
+    <script src="{{ asset('admin/js/pages/tablesDatatables.js') }}"></script>
+    <script>$(function(){ TablesDatatables.init(); });</script>
+
+@endpush
+
+@section('usarDespues')
+
+    <a href="#modal-regular2" class="btn btn-sm btn-default" data-toggle="modal">Fade In</a>
     <!-- Regular Modal 2 -->
     <div id="modal-regular2" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -81,16 +100,6 @@
         </div>
     </div>
     <!-- END Regular Modal 2 -->
-@endsection
-
-@push('scripts')
-    <!-- Load and execute javascript code used only in this page -->
-    <script src="{{ asset('admin/js/pages/tablesDatatables.js') }}"></script>
-    <script>$(function(){ TablesDatatables.init(); });</script>
-
-@endpush
-
-@section('usarDespues')
     <!-- Mini Top Stats Row -->
     <div class="row">
         <div class="col-sm-6 col-lg-3">

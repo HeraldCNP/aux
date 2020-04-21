@@ -87,7 +87,7 @@
 
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="admin/img/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.svg') }}">
     <!-- END Icons -->
 
     <!-- Stylesheets -->
@@ -113,7 +113,7 @@
 <!-- Login Background -->
 <div id="login-background">
     <!-- For best results use an image with a resolution of 2560x400 pixels (prefer a blurred image for smaller file size) -->
-    <img src="img/placeholders/headers/login_header.jpg" alt="Login Background" class="animation-pulseSlow">
+    <img src="{{ asset('admin/img/placeholders/headers/login_header.jpg') }}" alt="Login Background" class="animation-pulseSlow">
 </div>
 <!-- END Login Background -->
 
@@ -121,7 +121,7 @@
 <div id="login-container" class="animation-fadeIn">
     <!-- Login Title -->
     <div class="login-title text-center">
-        <h1><i class="gi gi-flash"></i> <strong>ProUI</strong><br><small>Please <strong>Login</strong> or <strong>Register</strong></small></h1>
+        <h1><strong>WonderGroup</strong><br><small>Por favor <strong>Inicia Sesion</strong></small></h1>
     </div>
     <!-- END Login Title -->
 
@@ -134,7 +134,7 @@
                 <div class="col-xs-12">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Ingrese su correo Electronico" autofocus>
 
                         @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -148,7 +148,7 @@
                 <div class="col-xs-12">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Ingrese su contraseña">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -166,14 +166,14 @@
                     </label>
                 </div>
                 <div class="col-xs-8 text-right">
-                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Login to Dashboard</button>
+                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Iniciar Sesion</button>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-xs-12 text-center">
-                    <a href="javascript:void(0)" id="link-register-login"><small>Crear Nueva cuenta</small></a>
-                </div>
-            </div>
+{{--            <div class="form-group">--}}
+{{--                <div class="col-xs-12 text-center">--}}
+{{--                    <a href="javascript:void(0)" id="link-register-login"><small>Crear Nueva cuenta</small></a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </form>
         <!-- END Login Form -->
 
@@ -257,7 +257,7 @@
 
     <!-- Footer -->
     <footer class="text-muted text-center">
-        <small><span id="year-copy"></span> &copy; <a href="https://1.envato.market/x4R" target="_blank">ProUI 3.8</a></small>
+        <small>WonderGroup &copy; 2020</small>
     </footer>
     <!-- END Footer -->
 </div>

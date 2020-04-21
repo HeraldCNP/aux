@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Dashboard - WonderGroup</title>
+    <title>WonderGroup - Dashboard</title>
 
     <meta name="description" content="ProUI is a Responsive Bootstrap Admin Template created by pixelcave and published on Themeforest.">
     <meta name="author" content="pixelcave">
@@ -13,15 +13,7 @@
 
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" href="img/icon57.png" sizes="57x57">
-    <link rel="apple-touch-icon" href="img/icon72.png" sizes="72x72">
-    <link rel="apple-touch-icon" href="img/icon76.png" sizes="76x76">
-    <link rel="apple-touch-icon" href="img/icon114.png" sizes="114x114">
-    <link rel="apple-touch-icon" href="img/icon120.png" sizes="120x120">
-    <link rel="apple-touch-icon" href="img/icon144.png" sizes="144x144">
-    <link rel="apple-touch-icon" href="img/icon152.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="img/icon180.png" sizes="180x180">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.svg') }}">
     <!-- END Icons -->
 
     <!-- Stylesheets -->
@@ -110,7 +102,7 @@
                 <div class="sidebar-content ">
                     <!-- Brand -->
                     <a href="index.html" class="sidebar-brand">
-                        <i class="gi gi-flash"></i><span class="sidebar-nav-mini-hide"><strong>Wonder</strong>Group</span>
+                        <span class="sidebar-nav-mini-hide"><strong>Wonder</strong>Group</span>
                     </a>
                     <!-- END Brand -->
 
@@ -118,7 +110,7 @@
                     <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
                         <div class="sidebar-user-avatar">
                             <a href="page_ready_user_profile.html">
-                                <img src="img/placeholders/avatars/avatar2.jpg" alt="avatar">
+                                <img src="{{ asset('admin/img/placeholders/avatars/avatar2.jpg') }}" alt="avatar">
                             </a>
                         </div>
 {{--                        <div class="sidebar-user-name">{{ Auth::user()->name }}</div>--}}
@@ -177,19 +169,19 @@
                     <!-- User Dropdown -->
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="img/placeholders/avatars/avatar2.jpg" alt="avatar"> <i class="fa fa-angle-down"></i>
+                            <img src="{{ asset('admin/img/placeholders/avatars/avatar2.jpg') }}" alt="avatar"> <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
-                            <li class="dropdown-header text-center">Account</li>
+                            <li class="dropdown-header text-center">Cuenta</li>
                             <li>
                                 <a href="page_ready_user_profile.html">
                                     <i class="fa fa-user fa-fw pull-right"></i>
-                                    Profile
+                                    Perfil
                                 </a>
                                 <!-- Opens the user settings modal that can be found at the bottom of each page (page_footer.html in PHP version) -->
                                 <a href="#modal-user-settings" data-toggle="modal">
                                     <i class="fa fa-cog fa-fw pull-right"></i>
-                                    Settings
+                                    Opciones
                                 </a>
                             </li>
                             <li class="divider"></li>
@@ -215,6 +207,7 @@
 
             <!-- Page content -->
             <div id="page-content">
+
                 <!-- Dashboard Header -->
                 <!-- For an image header add the class 'content-header-media' and an image as in the following example -->
                 @yield('content')
@@ -227,7 +220,7 @@
                     created <i class="fa fa-heart text-danger"></i>by <a href="https://1.envato.market/ydb" target="_blank">WonderGroup</a>
                 </div>
                 <div class="pull-left">
-                    <span id="year-copy"></span> &copy; Derechos Reservados
+                    WonderGroup &copy; Derechos Reservados
                 </div>
             </footer>
             <!-- END Footer -->
