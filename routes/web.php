@@ -27,8 +27,8 @@ Auth::routes();
 
 
 Route::group(['
-        prefix' => 'admin',
-        'namespace' => 'admin', 'middleware' => 'auth'],
+        prefix' => 'Admin',
+        'namespace' => 'Admin', 'middleware' => 'auth'],
 //    'middleware' => 'auth']
     function (){
 
