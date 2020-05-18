@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');
+
+
 
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/practicas', 'RoutesController@practicas')->name('practicas');
+Route::get('/video', 'RoutesController@videos')->name('video');
 
 
 
@@ -34,5 +38,6 @@ Route::group(['
 
 
     Route::resource('usuarios', 'UserController');
+    Route::resource('videos', 'VideoController');
     Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 });
